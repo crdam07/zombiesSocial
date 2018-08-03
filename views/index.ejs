@@ -1,0 +1,17 @@
+<% include _header %>
+<h1> Bienvenid@ a la guarida zombie rich </h1>
+
+<% zombies.forEach((zombie)=> {%>
+<div class="panel panel-default" id="container">
+    <div class="panel-heading" id="container">
+        <a href="/zombies/<%= zombie.username %>">
+            <%= zombie.name() %>
+        </a>
+    </div>
+    <% if (zombie.bio) { %>
+        <div class="panel-body"><%= zombie.bio %></div>
+    <% } %>
+    </div>
+    <% }) %>
+
+<% include _footer %>
