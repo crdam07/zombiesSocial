@@ -12,7 +12,7 @@
  var passportsetup = require("./passportsetup");
  var app = express();
 
- mongoose.connect("mongodb://<Sergio Reyes>:<Sergio Reyes>@ds111082.mlab.com:11082/zombie-social");
+ mongoose.connect("mongodb://sergio:sergio10@ds111082.mlab.com:11082/zombie-social");
  
  passportsetup();
 
