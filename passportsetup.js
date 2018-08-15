@@ -20,7 +20,7 @@ passport.use("login", new LocalStrategy(function(username, password, done){
             return done(err);
         }
         if(!zombie){
-            return done(null, false, {message:"No existe ningun zombie con ese nombre"})
+            return done(null, false, {message:"There is not a Zombie with that name"})
         }
         zombie.checkPassword(password,(err,isMatch)=>{
             if(err){
@@ -29,7 +29,7 @@ passport.use("login", new LocalStrategy(function(username, password, done){
             if (isMatch){
                 return done(null,zombie)
             }else{
-                return done(null,false,{message:"La contraseña no es valida"})
+                return done(null,false,{message:"Wrong password"})
             } 
         })
     })

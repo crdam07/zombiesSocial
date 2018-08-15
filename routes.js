@@ -136,7 +136,7 @@ router.post("/edit", ensureAuthenticated,(req,res,next)=>{
                 next(err);
                 return;
             }
-            req.flash("info","Perfil Actualizado");
+            req.flash("info","Profile updated");
             res.redirect("/edit");
         });
 });
@@ -148,7 +148,7 @@ function ensureAuthenticated(req,res,next){
     if(req.isAuthenticated()){
         next();
     }else{
-        req.flash("info","Necesitas iniciar sesión para poder ver esta sección");
+        req.flash("info","You need to log in to see this section");
         res.redirect("/login");
     }
 }

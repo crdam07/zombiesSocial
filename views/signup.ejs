@@ -1,18 +1,18 @@
 <% include _header%>
 
-<h1>Registro</h1>
+<h1>Register</h1>
 
 <form action = "/signup" method="post">
     <div class ="form-group">
         <input name="username" type="text" class="form-control"
-        placeholder="Nombre de usuario" required autofocus/>
+        placeholder="Username" required autofocus/>
     </div>
     <div class="form-group">
         <input name="password" type="password" class="form-control"
-        placeholder="Contraseña" required/>
+        placeholder="Password" required/>
     </div>
 
-    <a class="form-group">Rol</a>
+    <a class="form-group">Role</a>
     <select name="role" class="form-group">
         <option value="zombie-king">Zombie King</option>
         <option value="zombie-queen">Zombie Queen</option>
@@ -21,7 +21,7 @@
 
     </select>
 
-    <input type="submit" value="Registrarse"
+    <input type="submit" value="Sign Up"
      class="btn btn-primary btn-block"/>
     
 </form>
